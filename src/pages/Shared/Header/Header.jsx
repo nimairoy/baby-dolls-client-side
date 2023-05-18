@@ -3,13 +3,27 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 
 const Header = () => {
+    const user = ''
 
     const navItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
-        <li><Link to='/allbabydolls' className='font-semibold'>All Baby Dolls</Link></li>
-        <li><Link to='/mydolls' className='font-semibold'>My Dolls</Link></li>
-        <li><Link to='/addnewdoll' className='font-semibold'>Add a New Doll</Link></li>
+        <li><Link to='/allbabydolls' className='font-semibold'>All Dolls</Link></li>
         <li><Link to='/blogs' className='font-semibold'>Blogs</Link></li>
+        {
+                user
+                ?
+                <>
+                    <li><Link to='/mydolls' className='font-semibold'>My Dolls</Link></li>
+                    <li><Link to='/addnewdoll' className='font-semibold'>Add a Doll</Link></li>
+                    <li><Link to='/addnewdoll' className='font-semibold'>img</Link></li>
+                    <li><Link to='/addnewdoll' className='font-semibold'>Log Out</Link></li>
+                </>
+                :
+                <>
+                    <li><Link to='/login' className='font-semibold'>Login</Link></li>
+                    <li><Link to='/signup' className='font-semibold'>Sign Up</Link></li>
+                </>
+        }
     </>
 
     return (

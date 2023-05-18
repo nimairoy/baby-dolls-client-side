@@ -5,6 +5,8 @@ import AllBabyDoll from "../pages/AllBabyDoll/AllBabyDoll";
 import MyDoll from "../pages/MyDoll/MyDoll";
 import AddNewDoll from "../pages/AddNewDoll/AddNewDoll";
 import Blogs from "../pages/Blogs/Blogs";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Register></Register>
             }
         ]
     }
