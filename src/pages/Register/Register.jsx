@@ -25,7 +25,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="Password" className="input input-bordered input-primary w-full" />                                
+                                <input type="password" name='password' placeholder="Password" className="input input-bordered input-primary w-full" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
