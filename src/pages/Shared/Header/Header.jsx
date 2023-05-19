@@ -7,7 +7,7 @@ const Header = () => {
 
     const navItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
-        <li><Link to='/allbabydolls' className='font-semibold'>All Dolls</Link></li>
+        <li><Link to='/dolls' className='font-semibold'>All Dolls</Link></li>
         <li><Link to='/blogs' className='font-semibold'>Blogs</Link></li>
         {
                 user

@@ -7,6 +7,7 @@ import AddNewDoll from "../pages/AddNewDoll/AddNewDoll";
 import Blogs from "../pages/Blogs/Blogs";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import DollDetails from "../pages/AllBabyDoll/DollDetails/DollDetails";
 
 
 const router = createBrowserRouter([
@@ -19,9 +20,14 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/allbabydolls',
+                path: '/dolls',
                 element: <AllBabyDoll></AllBabyDoll>,
-                loader: () => fetch('http://localhost:5000/alldolls')
+                loader: () => fetch('http://localhost:5000/dolls')
+            },
+            {
+                path: '/dolls/:id',
+                element: <DollDetails></DollDetails>,
+                loader: ({params})=> fetch(`http://localhost:5000/dolls/${params.id}`)
             },
             {
                 path: '/mydolls',

@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DollCard = ({ doll }) => {
 
     const { _id, doll_name, img, price, quantity, category, seller } = doll;
 
     return (
-        <row className="md:flex justify-between gap-4 items-center bg-slate-200 mb-8 p-4">
+        <row className="md:flex justify-between gap-4 rounded-md items-center bg-slate-200 mb-8 p-4">
             <div className='flex items-center gap-4'>
                 <img src={img} alt="" />
                 <div>
@@ -17,7 +18,7 @@ const DollCard = ({ doll }) => {
                 </div>
             </div>
             <div className='pr-8'>
-                <button className='btn btn-secondary'>See Details</button>
+                <Link to={`/dolls/${_id}`} className='btn btn-secondary'>View Details</Link>
             </div>
         </row>
     );
