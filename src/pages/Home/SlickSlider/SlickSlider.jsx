@@ -33,17 +33,17 @@ const SlickSlider = () => {
                             <Link to='/shop' className='btn btn-outline btn-primary mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                 
+                </div>
                 <div className='relative'>
                     <img src={slide2} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-info">
                         <div className='absolute z-20 w-3/4 mx-auto py-10 rounded-lg bg-slate-100/25 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                            <h3 className="text-4xl uppercase text-primary font-bold">60% OFF Delivery Fee</h3>
-                            <h4 className='text-4xl text-secondary mt-3 font-semibold'>With Voucher</h4>
+                            <h3 className="text-4xl uppercase text-[#00ff9d] font-bold">60% OFF Delivery Fee</h3>
+                            <h4 className='text-4xl text-[#e5ff00] mt-3 font-semibold'>With Voucher</h4>
                             <Link to='/shop' className='btn btn-outline btn-primary mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div className='relative'>
                     <img src={slide3} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-success">
@@ -53,7 +53,7 @@ const SlickSlider = () => {
                             <Link to='/shop' className='btn btn-outline btn-primary mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div className='relative'>
                     <img src={slide4} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-neutral">
@@ -63,7 +63,7 @@ const SlickSlider = () => {
                             <Link to='/shop' className='btn btn-outline btn-success mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div className='relative'>
                     <img src={slide5} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-accent">
@@ -73,7 +73,7 @@ const SlickSlider = () => {
                             <Link to='/shop' className='btn btn-outline btn-primary mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                
+                </div>
                 <div className='relative'>
                     <img src={slide6} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-black">
@@ -83,7 +83,7 @@ const SlickSlider = () => {
                             <Link to='/shop' className='btn btn-outline btn-warning mt-4'>Shop Now</Link>
                         </div>
                     </div>
-                </div>                
+                </div>
             </Slider>
         </div>
     );
