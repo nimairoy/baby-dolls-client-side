@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsGoogle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
+
+    const { userLogin } = useContext(AuthContext);
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        userLogin(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            alert('user login successfully')
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+
+    }
+
     return (
         <div className="min-h-screen bg-base-200">
             <div className="hero-content">
                 <div className="card w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <form >
+                        <form onSubmit={handleLogin}>
                             <h1 className="text-3xl mb-6 font-bold">Login now!</h1>
                             <div className="form-control">
                                 <label className="label">

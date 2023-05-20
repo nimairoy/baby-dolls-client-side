@@ -2,22 +2,40 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 import { AuthContext } from '../../../Provider/AuthProvider';
+import { Tooltip } from 'react-tooltip';
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logOut()
+            .then(result => {
+                alert('logout successfully')
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
 
     const navItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
         <li><Link to='/dolls' className='font-semibold'>All Dolls</Link></li>
         <li><Link to='/blogs' className='font-semibold'>Blogs</Link></li>
         {
-                user
+            user
                 ?
                 <>
                     <li><Link to='/mydolls' className='font-semibold'>My Dolls</Link></li>
                     <li><Link to='/addnewdoll' className='font-semibold'>Add a Doll</Link></li>
-                    <li><Link to='/addnewdoll' className='font-semibold'>img</Link></li>
-                    <li><Link to='/addnewdoll' className='font-semibold'>Log Out</Link></li>
+                    <li>
+                        <span><img id="my-anchor-element-id" className='w-10 rounded-full' src={user.photoURL} alt="" /></span>
+                        <Tooltip
+                            // Don't forget the `#`!
+                            anchorSelect="#my-anchor-element-id"
+                            content={user.displayName}
+                        />
+                    </li>
+                    <li><Link onClick={handleSignOut} to='/addnewdoll' className='font-semibold'>Log Out</Link></li>
                 </>
                 :
                 <>

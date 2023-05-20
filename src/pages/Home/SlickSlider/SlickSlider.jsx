@@ -12,7 +12,7 @@ const SlickSlider = () => {
 
     const settings = {
         dots: true,
-        // autoplay: true,
+        autoplay: true,
         fade: true,
         infinite: true,
         slidesToShow: 2,

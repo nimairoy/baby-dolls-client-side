@@ -6,6 +6,7 @@ import router from './routes/Routes.jsx'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AuthProvider from './Provider/AuthProvider'
+import 'react-tooltip/dist/react-tooltip.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
