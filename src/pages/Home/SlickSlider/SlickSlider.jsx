@@ -27,7 +27,7 @@ const SlickSlider = () => {
                 <div className='relative'>
                     <img src={slide1} alt="" />
                     <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-t from-pink-400">
-                        <div className='absolute z-20 w-3/4 mx-auto py-10 rounded-lg bg-slate-100/25 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                        <div className='absolute w-3/4 mx-auto py-10 rounded-lg bg-slate-100/25 text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                             <h3 className="text-4xl uppercase text-primary font-bold">60% OFF Delivery Fee</h3>
                             <h4 className='text-4xl text-secondary mt-3 font-semibold'>With Voucher</h4>
                             <Link to='/shop' className='btn btn-outline btn-primary mt-4'>Shop Now</Link>

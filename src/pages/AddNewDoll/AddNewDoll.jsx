@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Toaster, toast } from 'react-hot-toast';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AddNewDoll = () => {
+
+    const { user } = useContext(AuthContext);
 
     const handleAddDoll = event => {
         event.preventDefault()
@@ -38,13 +42,14 @@ const AddNewDoll = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
-            alert('Data insert successfully')
+            toast.success('Data insert successfully')
             form.reset();
         })
     }
 
     return (
         <div className='my-container py-20'>
+            <Toaster></Toaster>
             <form onSubmit={handleAddDoll}>
                 <fieldset className='border-2 border-primary p-4 rounded'>
                     <legend className='text-4xl font-semibold pr-2'>Add a New Doll: </legend>
@@ -65,13 +70,13 @@ const AddNewDoll = () => {
                             <label className="label">
                                 <span className="label-text">Seller Name</span>
                             </label>
-                            <input type="text" required placeholder="Seller Name" name='seller_name' className="input border-primary input-bordered" />
+                            <input defaultValue={user?.displayName} type="text" required placeholder="Seller Name" name='seller_name' className="input border-primary input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input name='email' required type="email" placeholder="Seller Email" className="input border-primary input-bordered" />
+                            <input defaultValue={user?.email} name='email' required type="email" placeholder="Seller Email" className="input border-primary input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">

@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Register = () => {
-
-    const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const { setUser, createUser } = useContext(AuthContext);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -14,26 +15,34 @@ const Register = () => {
         const password = form.password.value
         const name = form.name.value;
         const photo = form.photo.value;
-        console.log(email, password, name, photo)
+        // console.log(email, password, name, photo)
+
+        if(!email || !password || !name || !photo){
+            toast.error('Please Fill Up the Input')
+            return
+        }
 
         createUser(email, password)
         .then(result => {
-            const user = result.user;
+            const user = result.user;            
             updateProfile(user, {
                 displayName: name,
                 photoURL: photo
             });
-            console.log(user)
-            alert('user created successfully')
+            // console.log(user)
+            setUser(user);
+            toast.success('user created successfully')
+            form.reset();
         })
-        .catch(error => {
-            console.log(error.message)
+        .catch(err => {
+            setError(err.message)
         })
 
     }
     
     return (
         <div className="min-h-screen bg-base-200">
+            <Toaster />
             <div className="hero-content">
                 <div className="card w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
@@ -67,6 +76,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-secondary">Sign Up</button>
                             </div>
+                            <p className='text-red-400 mt-6'>{error}</p>
                         </form>
                     </div>
                     <p className='text-center mt-4 pb-6'>Already a Member ? Please <Link to='/login' className='text-secondary font-bold underline'>Login</Link></p>

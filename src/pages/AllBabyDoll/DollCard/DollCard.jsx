@@ -6,7 +6,7 @@ const DollCard = ({ doll }) => {
     const { _id, doll_name, photo, price, quantity, category, seller_name } = doll;
 
     return (
-        <row className="md:flex justify-between gap-4 rounded-md items-center bg-slate-200 mb-8 p-4">
+        <div className="md:flex justify-between gap-4 rounded-md items-center bg-slate-200 mb-8 p-4">
             <div className='flex items-center gap-4'>
                 <img className='w-44' src={photo} alt="" />
                 <div>
@@ -20,7 +20,7 @@ const DollCard = ({ doll }) => {
             <div className='pr-8'>
                 <Link to={`/dolls/${_id}`} className='btn btn-secondary'>View Details</Link>
             </div>
-        </row>
+        </div>
     );
 };
 

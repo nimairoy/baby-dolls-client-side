@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BsGoogle } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Login = () => {
-
+    const [error, setError] = useState('');
     const { userLogin, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = event => {
@@ -16,11 +17,14 @@ const Login = () => {
         userLogin(email, password)
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser)
-            alert('user login successfully')
+            // console.log(loggedUser)
+            // alert('user login successfully')
+            toast.success('User Login successfully')
+            setError('');
+            form.reset();
         })
         .catch(err => {
-            console.log(err.message)
+            setError(err.message)
         })
 
     }
@@ -31,16 +35,18 @@ const Login = () => {
         signInWithGoogle()
         .then(result => {
             const user = result.user;
-            console.log(user)
+            toast.success('User Login successfully')
+            setError('');
         })
         .catch(err => {
-            console.log(err.message)
+            setError(err.message)
         })
     }
 
 
     return (
         <div className="min-h-screen bg-base-200">
+            <Toaster />
             <div className="hero-content">
                 <div className="card w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
@@ -64,6 +70,7 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-secondary">Login</button>
                             </div>
+                            <p className='text-red-400 mt-6'> {error}</p>
                         </form>
                     </div>
                     <div className='px-8'>

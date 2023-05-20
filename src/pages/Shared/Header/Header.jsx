@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 import { AuthContext } from '../../../Provider/AuthProvider';
 import { Tooltip } from 'react-tooltip';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -10,10 +11,10 @@ const Header = () => {
     const handleSignOut = () => {
         logOut()
             .then(result => {
-                alert('logout successfully')
+                toast.success('logout successfully')
             })
             .catch(err => {
-                console.log(err.message)
+                toast.error(err.message)
             })
     }
 
@@ -33,9 +34,10 @@ const Header = () => {
                             // Don't forget the `#`!
                             anchorSelect="#my-anchor-element-id"
                             content={user.displayName}
+                            place="left"
                         />
                     </li>
-                    <li><Link onClick={handleSignOut} to='/addnewdoll' className='font-semibold'>Log Out</Link></li>
+                    <li><span onClick={handleSignOut} className='font-semibold'>Log Out</span></li>
                 </>
                 :
                 <>
@@ -47,6 +49,7 @@ const Header = () => {
 
     return (
         <div className="bg-base-100 shadow-md">
+            <Toaster></Toaster>
             <div className='navbar max-w-screen-xl mx-auto'>
                 <div className="navbar-start">
                     <div className="dropdown">
