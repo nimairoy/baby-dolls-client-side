@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
 
 const Header = () => {
-    const user = ''
+    const user = 'dollsMan'
 
     const navItems = <>
         <li><Link to='/' className='font-semibold'>Home</Link></li>
