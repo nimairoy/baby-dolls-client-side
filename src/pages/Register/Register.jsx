@@ -62,9 +62,7 @@ const Register = () => {
                                     <span className="label-text">Photo URL</span>
                                 </label>
                                 <input type="text" name='photo' placeholder="Photo url" className="input input-primary input-bordered" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                               
                             </div>
                             <div className="form-control mt-6">
                                 <button type='submit' className="btn btn-secondary">Sign Up</button>

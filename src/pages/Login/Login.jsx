@@ -5,7 +5,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
 
-    const { userLogin } = useContext(AuthContext);
+    const { userLogin, signInWithGoogle } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -24,6 +24,20 @@ const Login = () => {
         })
 
     }
+
+
+    // handle sign in with google
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+        .then(result => {
+            const user = result.user;
+            console.log(user)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+    }
+
 
     return (
         <div className="min-h-screen bg-base-200">
@@ -53,7 +67,7 @@ const Login = () => {
                         </form>
                     </div>
                     <div className='px-8'>
-                        <p className='flex justify-center border py-2 rounded-xl text-center cursor-pointer border-amber-300'><BsGoogle className='text-warning text-2xl mr-4' />  <span>Sign in with Google</span></p>
+                        <p onClick={handleSignInWithGoogle} className='flex justify-center border py-2 rounded-xl text-center cursor-pointer border-amber-300'><BsGoogle className='text-warning text-2xl mr-4' />  <span>Sign in with Google</span></p>
                     </div>
                     <p className='text-center mt-4 pb-6'>If You are new Please <Link to='/signup' className='text-secondary font-bold underline'>Sign Up</Link></p>
                 </div>
