@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import Error404 from "../pages/404/Error404";
 import ErrorPage from "../layouts/ErrorPage";
 import ReactTabDetails from "../pages/Home/ReactTabs/ReactTabDetails";
+import Update from "../pages/Update/Update";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
             {
                 path: '/mydolls',
                 element: <PrivateRoute><MyDoll></MyDoll></PrivateRoute>
+            },
+            {
+                path: '/update/:id',
+                element: <Update></Update>,
+                loader: ({params}) => fetch(`http://localhost:5000/dolls/${params.id}`)
             },
             {
                 path: '/addnewdoll',
