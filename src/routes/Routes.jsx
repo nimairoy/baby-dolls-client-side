@@ -9,6 +9,8 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import DollDetails from "../pages/AllBabyDoll/DollDetails/DollDetails";
 import PrivateRoute from "./PrivateRoute";
+import Error404 from "../pages/404/Error404";
+import ErrorPage from "../layouts/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -48,8 +50,13 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Register></Register>
-            }
+            },
+            
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 ])
 
