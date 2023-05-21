@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import ReactTabDetails from './ReactTabDetails';
 
 const ReactTabCard = ({ doll }) => {
 
-    console.log(doll)
+    const { id, doll_name, photo, description } = doll;
 
-    const { id, doll_name, photo, price, quantity, category, seller_name, description } = doll;
+
 
     return (
         <div style={{boxShadow: '2px 4px 16px 0px rgba(0, 0, 0, 0.3)'}} className="card w-full bg-base-100 mt-4">
@@ -15,7 +17,7 @@ const ReactTabCard = ({ doll }) => {
                 <h2 className="card-title">{doll_name}</h2>
                 <p className='my-2'>{description.slice(0, 80)}....</p>
                 <div className="card-actions">
-                    <button className="btn btn-secondary">View Details</button>
+                    <Link className="btn btn-secondary">View Details</Link>
                 </div>
             </div>
         </div>

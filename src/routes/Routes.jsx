@@ -11,6 +11,7 @@ import DollDetails from "../pages/AllBabyDoll/DollDetails/DollDetails";
 import PrivateRoute from "./PrivateRoute";
 import Error404 from "../pages/404/Error404";
 import ErrorPage from "../layouts/ErrorPage";
+import ReactTabDetails from "../pages/Home/ReactTabs/ReactTabDetails";
 
 
 const router = createBrowserRouter([
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mydolls',
-                element: <MyDoll></MyDoll>
+                element: <PrivateRoute><MyDoll></MyDoll></PrivateRoute>
             },
             {
                 path: '/addnewdoll',
-                element: <AddNewDoll></AddNewDoll>
+                element: <PrivateRoute><AddNewDoll></AddNewDoll></PrivateRoute>
             },
             {
                 path: '/blogs',
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <Register></Register>
             },
+            {
+                path: '/sub_categories/:id',
+                element: <ReactTabDetails></ReactTabDetails>
+            }
             
         ]
     },

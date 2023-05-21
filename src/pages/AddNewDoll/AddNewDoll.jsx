@@ -21,7 +21,7 @@ const AddNewDoll = () => {
 
         const dollInfo = {
             doll_name: name,
-            seller_email: email,
+            email,
             photo,
             seller_name,
             price,
