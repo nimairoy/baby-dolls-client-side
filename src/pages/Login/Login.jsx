@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { BsGoogle } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Toaster, toast } from 'react-hot-toast';
 
 const Login = () => {
     const [error, setError] = useState('');
     const { userLogin, signInWithGoogle } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         event.preventDefault();
@@ -22,6 +27,7 @@ const Login = () => {
             toast.success('User Login successfully')
             setError('');
             form.reset();
+            navigate(from, { replace: true });
         })
         .catch(err => {
             setError(err.message)

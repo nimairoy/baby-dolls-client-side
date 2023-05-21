@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { Toaster, toast } from 'react-hot-toast';
@@ -7,6 +7,11 @@ import { Toaster, toast } from 'react-hot-toast';
 const Register = () => {
     const [error, setError] = useState('');
     const { setUser, createUser } = useContext(AuthContext);
+    
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleRegister = event => {
         event.preventDefault();
@@ -33,6 +38,7 @@ const Register = () => {
             setUser(user);
             toast.success('user created successfully')
             form.reset();
+            navigate(from, { replace: true });
         })
         .catch(err => {
             setError(err.message)
