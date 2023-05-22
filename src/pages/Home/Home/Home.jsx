@@ -4,6 +4,10 @@ import Gallery from '../Gallery/Gallery';
 import ReactTabs from '../ReactTabs/ReactTabs';
 import NewArrival from '../NewArrival/NewArrival';
 import OffersBanner from '../OffersBanner/OffersBanner';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Home = () => {
     return (
