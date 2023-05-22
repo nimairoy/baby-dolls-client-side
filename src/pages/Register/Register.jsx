@@ -3,8 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { Toaster, toast } from 'react-hot-toast';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Register = () => {
+    useSetTitle('Sign Up')
     const [error, setError] = useState('');
     const { setUser, createUser } = useContext(AuthContext);
     

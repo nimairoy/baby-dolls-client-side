@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import { Toaster, toast } from 'react-hot-toast';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const AddNewDoll = () => {
+
+    useSetTitle('Add New Doll')
 
     const { user } = useContext(AuthContext);
 

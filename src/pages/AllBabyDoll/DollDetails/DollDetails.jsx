@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useSetTitle from '../../../hooks/useSetTitle';
 
 const DollDetails = () => {
 
@@ -7,6 +8,8 @@ const DollDetails = () => {
     // console.log(doll)
     const email = '';
     const { _id, doll_name, photo, price, quantity, category, seller_name, description } = doll;
+
+    useSetTitle(doll_name)
 
     return (
         <div className="md:grid md:grid-cols-2 w-full bg-base-100 shadow-xl">

@@ -3,8 +3,13 @@ import { BsGoogle } from 'react-icons/bs';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Toaster, toast } from 'react-hot-toast';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Login = () => {
+
+    // page title 
+    useSetTitle('Login')
+
     const [error, setError] = useState('');
     const { userLogin, signInWithGoogle } = useContext(AuthContext);
 

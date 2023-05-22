@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import DollCard from './DollCard/DollCard';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const AllBabyDoll = () => {
+    // page title
+    useSetTitle('All Dolls')
 
     const [allDolls, setAllDolls] = useState([]);
     useEffect( ()=>{

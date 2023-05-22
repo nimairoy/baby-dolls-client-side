@@ -1,8 +1,10 @@
 import React from 'react';
 import sidebar from '../../../src/assets/sidebar-island.png'
 import { Link } from 'react-router-dom';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Blogs = () => {
+    useSetTitle('Blogs')
     return (
         <div className='my-container md:grid md:grid-cols-4 py-8 px-2 gap-5'>
             <div className='col-span-3 text-justify'>

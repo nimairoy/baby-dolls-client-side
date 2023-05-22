@@ -1,8 +1,10 @@
 import React from 'react';
 import error from '../../../src/assets/404.jpg'
 import { Link } from 'react-router-dom';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Error404 = () => {
+    useSetTitle('Error Page')
     return (
         <div className='relative'>
             <img className='w-full max-h-screen' src={error} alt="" />
