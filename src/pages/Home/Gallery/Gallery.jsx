@@ -13,7 +13,7 @@ const Gallery = () => {
     }, [])
 
     return (
-        <div className='py-12 mt-12'>
+        <div className='py-12 mt-12 my-container'>
             <h2 className="text-4xl text-center mb-12 font-bold">See Our Products</h2>
             <div className="md:grid md:grid-cols-5">
                 {

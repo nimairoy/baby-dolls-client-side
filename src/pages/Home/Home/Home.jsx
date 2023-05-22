@@ -2,6 +2,8 @@ import React from 'react';
 import SlickSlider from '../SlickSlider/SlickSlider';
 import Gallery from '../Gallery/Gallery';
 import ReactTabs from '../ReactTabs/ReactTabs';
+import NewArrival from '../NewArrival/NewArrival';
+import OffersBanner from '../OffersBanner/OffersBanner';
 
 const Home = () => {
     return (
@@ -9,6 +11,8 @@ const Home = () => {
             <SlickSlider></SlickSlider>
             <Gallery></Gallery>
             <ReactTabs></ReactTabs>
+            <OffersBanner></OffersBanner>
+            <NewArrival></NewArrival>
         </div>
     );
 };
