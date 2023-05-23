@@ -1,12 +1,12 @@
 import React from 'react';
 import SlickSlider from '../SlickSlider/SlickSlider';
 import Gallery from '../Gallery/Gallery';
-import ReactTabs from '../ReactTabs/ReactTabs';
 import NewArrival from '../NewArrival/NewArrival';
 import OffersBanner from '../OffersBanner/OffersBanner';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import useSetTitle from '../../../hooks/useSetTitle';
+import ShopByCategory from '../ShopByCategory/ShopByCategory';
 // ..
 AOS.init();
 
@@ -18,7 +18,7 @@ const Home = () => {
         <div className='max-w-screen-xl pb-24 mx-auto'>
             <SlickSlider></SlickSlider>
             <Gallery></Gallery>
-            <ReactTabs></ReactTabs>
+            <ShopByCategory></ShopByCategory>
             <OffersBanner></OffersBanner>
             <NewArrival></NewArrival>
         </div>

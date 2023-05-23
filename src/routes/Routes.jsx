@@ -9,9 +9,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import DollDetails from "../pages/AllBabyDoll/DollDetails/DollDetails";
 import PrivateRoute from "./PrivateRoute";
-import Error404 from "../pages/404/Error404";
 import ErrorPage from "../layouts/ErrorPage";
-import ReactTabDetails from "../pages/Home/ReactTabs/ReactTabDetails";
 import Update from "../pages/Update/Update";
 
 
@@ -58,10 +56,7 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <Register></Register>
             },
-            {
-                path: '/sub_categories/:id',
-                element: <ReactTabDetails></ReactTabDetails>
-            }
+            
             
         ]
     },
