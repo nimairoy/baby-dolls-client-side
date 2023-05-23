@@ -23,9 +23,9 @@ const AllBabyDoll = () => {
     }
 
     return (
-        <div className='max-w-screen-xl mx-auto'>
+        <div className='max-w-screen-xl mx-auto p-4'>
             <h2 className="text-4xl my-8 text-center font-bold">Available Dolls</h2>
-            <div className='text-center my-8'>
+            <div className='text-center flex items-center justify-center my-8'>
                 <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Type here" className="input rounded-r-none input-bordered input-info w-full max-w-xs" />
                 <button onClick={handleSearch} className='btn rounded-l-none btn-secondary'>Search</button>
             </div>

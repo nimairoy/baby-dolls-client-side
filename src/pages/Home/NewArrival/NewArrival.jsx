@@ -18,65 +18,65 @@ AOS.init();
 const NewArrival = () => {
     return (
         <div className="bg-slate-50">
-            <div className='my-container py-12'>
+            <div className='my-container px-4 py-12'>
                 <h2 data-aos="fade-up" data-aos-duration="3000" className="text-4xl mb-16 font-bold text-center">New Arrivals</h2>
                 <div className='grid md:grid-cols-5 gap-2'>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img1} alt="" />
+                        <img className='w-full' src={img1} alt="" />
                         <h3 className="text-xl my-2">Hugs And Giggles Dark Skin</h3>
                         <p className='text-lg font-bold'>$44.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img2} alt="" />
+                        <img className='w-full' src={img2} alt="" />
                         <h3 className="text-xl my-2">A Birthday Wish Blue Eyes Blonde</h3>
                         <p className='text-lg font-bold'>$44.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img3} alt="" />
+                        <img className='w-full' src={img3} alt="" />
                         <h3 className="text-xl my-2">Bunny Hop</h3>
                         <p className='text-lg font-bold'>$144.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img4} alt="" />
+                        <img className='w-full' src={img4} alt="" />
                         <h3 className="text-xl my-2">Baby Lexi Doll Medium Skin</h3>
                         <p className='text-lg font-bold'>$31.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img5} alt="" />
+                        <img className='w-full' src={img5} alt="" />
                         <h3 className="text-xl my-2">Hugs And Giggles Dark Skin</h3>
                         <p className='text-lg font-bold'>$44.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img6} alt="" />
+                        <img className='w-full' src={img6} alt="" />
                         <h3 className="text-xl my-2">Swan Lake White</h3>
                         <p className='text-lg font-bold'>$23.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img7} alt="" />
+                        <img className='w-full' src={img7} alt="" />
                         <h3 className="text-xl my-2">Hugs And Giggles Dark Skin</h3>
                         <p className='text-lg font-bold'>$44.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img8} alt="" />
+                        <img className='w-full' src={img8} alt="" />
                         <h3 className="text-xl  my-">Alice</h3>
                         <p className='text-lg font-bold'>$87.88</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img9} alt="" />
+                        <img className='w-full' src={img9} alt="" />
                         <h3 className="text-xl my-2">All American Cutie</h3>
                         <p className='text-lg font-bold'>$414.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="3000" className='border rounded-sm bg-white hover:shadow-lg p-4'>
-                        <img src={img10} alt="" />
+                        <img className='w-full' src={img10} alt="" />
                         <h3 className="text-xl my-2">Sugar Plum Fairy Dark Skin Tone</h3>
                         <p className='text-lg font-bold'>$44.95</p>
                         <button className='btn btn-secondary btn-sm mt-4'>Buy Now</button>

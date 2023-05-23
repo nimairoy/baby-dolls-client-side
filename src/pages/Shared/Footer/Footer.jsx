@@ -6,7 +6,7 @@ import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 const Footer = () => {
     return (
         <>
-            <div className='bg-gray-600 py-12'>
+            <div className='bg-gray-600 py-12 px-4'>
                 <div className="max-w-screen-xl mx-auto md:flex justify-around">
                     <div className='text-center'>
                         <Link to='/'> <img className='w-28 mx-auto' src={logo} alt="" /> </Link>

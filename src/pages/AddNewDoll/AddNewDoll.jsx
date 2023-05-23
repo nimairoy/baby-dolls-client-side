@@ -51,7 +51,7 @@ const AddNewDoll = () => {
     }
 
     return (
-        <div className='my-container py-20'>
+        <div className='my-container p-4 py-20'>
             <Toaster></Toaster>
             <form onSubmit={handleAddDoll}>
                 <fieldset className='border-2 border-primary p-4 rounded'>

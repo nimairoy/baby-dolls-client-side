@@ -55,7 +55,7 @@ const MyDoll = () => {
 
 
     return (
-        <div className='my-container py-12'>
+        <div className='my-container p-4 py-12'>
             {
                 dolls.map(doll => <MyDollCard
                     key={doll._id}

@@ -22,7 +22,7 @@ const ShopByCategory = () => {
     }
 
     return (
-        <div className='my-container py-12'>
+        <div className='my-container px-4 py-12'>
             <div className='text-center'>
                 <h2 data-aos="fade-up" data-aos-duration="3000"className="text-4xl font-semibold">Shop By Category</h2>
             </div>

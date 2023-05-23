@@ -7,8 +7,8 @@ const DollCard = ({ doll }) => {
 
     return (
         <div className="md:flex justify-between gap-4 rounded-md items-center bg-slate-200 mb-8 p-4">
-            <div className='flex items-center gap-4'>
-                <img className='w-44' src={photo} alt="" />
+            <div className='md:flex items-center gap-4'>
+                <img className='w-44 mb-4 md:mb-2' src={photo} alt="" />
                 <div>
                     <h4 className="text-xl font-bold">{doll_name}</h4>
                     <p className='mt-3'><strong>Price: </strong> ${price}</p>
@@ -18,7 +18,7 @@ const DollCard = ({ doll }) => {
                 </div>
             </div>
             <div className='pr-8'>
-                <Link to={`/dolls/${_id}`} className='btn btn-secondary'>View Details</Link>
+                <Link to={`/dolls/${_id}`} className='btn mt-4 md:auto sm:btn-sm md:btn-md btn-secondary'>View Details</Link>
             </div>
         </div>
     );

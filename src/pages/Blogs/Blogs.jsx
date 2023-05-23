@@ -7,8 +7,8 @@ const Blogs = () => {
     useSetTitle('Blogs')
     return (
         <div className='my-container md:grid md:grid-cols-4 py-8 px-2 gap-5'>
-            <div className='col-span-3 text-justify'>
-                <h2 className="text-4xl my-4">
+            <div className='col-span-3 text-justify p-4'>
+                <h2 className="text-2xl md:text-4xl my-4">
                     1. What is an access token and refresh token? How do they work and where should we store them on the client-side?
                 </h2>
                 <p>
@@ -24,7 +24,7 @@ const Blogs = () => {
                     Local Storage/Session Storage: Access tokens can be stored in the client's browser storage, such as local storage or session storage. However, storing tokens in these locations makes them susceptible to cross-site scripting attacks. Therefore, it's crucial to implement proper security measures, such as validating the token's integrity and using other security mechanisms like Content Security Policy (CSP).
                     In-Memory Storage: In some cases, access tokens can be stored in memory on the client-side. However, this approach is less secure as the tokens can be easily accessed by malicious scripts or other vulnerabilities.
                 </p>
-                <h2 className="text-4xl my-4">
+                <h2 className="text-2xl md:text-4xl my-4">
                     2. Compare SQL and NO-SQL Database ?
                 </h2>
                 <p>
@@ -35,7 +35,7 @@ const Blogs = () => {
                     <strong>NoSQL Database: </strong>
                     A NoSQL database has a dynamic schema for unstructured data. Data is stored in many ways which means it can be document-oriented, column-oriented, graph-based, or organized as a key-value store. This flexibility means that documents can be created without having a defined structure first. Also, each document can have its own unique structure. The syntax varies from database to database, and you can add fields as you go.
                 </p>
-                <h2 className="text-4xl my-4">
+                <h2 className="text-2xl md:text-4xl my-4">
                     3. What is express js? What is Nest JS ?
                 </h2>
                 <p>
@@ -46,7 +46,7 @@ const Blogs = () => {
                     <strong>NestJS: </strong>
                     NestJS is a progressive Node.js framework for building efficient, scalable, and reliable server-side applications. It is built on top of Express.js and provides a more structured way of building applications with TypeScript. NestJS uses a modular architecture, making it easy to maintain and scale applications as they grow.
                 </p>
-                <h2 className="text-4xl my-4">
+                <h2 className="text-2xl md:text-4xl my-4">
                     4. What is MongoDB aggregate and how does it work ?
                 </h2>
                 <p>
