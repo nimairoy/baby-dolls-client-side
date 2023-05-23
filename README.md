@@ -30,4 +30,4 @@
     5. Smooth Checkout Process: The checkout process on the Baby Doll React website is designed to be smooth and hassle-free. React technology enables real-time updates and validation of user input, ensuring accurate information submission and minimizing the possibility of errors. Additionally, the site offers multiple secure payment options, providing flexibility and convenience to customers during the checkout process.
 
 
-site live link:   
+site live link:   https://baby-dolls-54819.web.app/

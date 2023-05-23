@@ -9,6 +9,12 @@ const MyDoll = () => {
     const { user } = useContext(AuthContext);
     const [dolls, setDolls] = useState([]);
 
+    // const options = [
+    //     {value: "Price-Ascending"}
+    // ]
+
+    // const [selected, setSelected] = useState(options[0]);
+
     const url = `https://baby-dolls-server.vercel.app/dolls?email=${user.email}`;
     useEffect(() => {
         fetch(url)
@@ -17,10 +23,17 @@ const MyDoll = () => {
     }, [])
 
 
+    // useEffect(()=>{
+    //     const [value, type] = selected.value.split('-').map(item => item.toLowerCase())
+    //     fetch(`http://localhost:5000/mydolls?value=${value}&type=${type}`)
+    //     .then(res => res.json())
+    //     .then(data => console.log(data))
+    // }, [selected])
+
     // handle delete api 
 
     const handleDelete = _id => {
-        console.log(_id)
+        // console.log(_id)
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -56,6 +69,13 @@ const MyDoll = () => {
 
     return (
         <div className='my-container p-4 py-12'>
+            <div className='mb-8 flex justify-end'>
+                <select className="select select-secondary w-full max-w-xs">
+                    <option disabled selected>Sort By</option>
+                    <option>Name</option>
+                    <option>Price</option>
+                </select>
+            </div>
             {
                 dolls.map(doll => <MyDollCard
                     key={doll._id}
