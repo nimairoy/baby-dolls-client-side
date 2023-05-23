@@ -10,16 +10,15 @@ const AllBabyDoll = () => {
     const [searchText, setSearchText] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/dolls')
+        fetch('https://baby-dolls-server.vercel.app/dolls')
             .then(res => res.json())
             .then(data => setAllDolls(data))
     }, [])
 
-
     const handleSearch = () => {
-        fetch(`http://localhost:5000/jobSearchByName/${searchText}`)
-        .then(res => res.json())
-        .then(data => setAllDolls(data))
+        fetch(`https://baby-dolls-server.vercel.app/jobSearchByName/${searchText}`)
+            .then(res => res.json())
+            .then(data => setAllDolls(data))
     }
 
     return (

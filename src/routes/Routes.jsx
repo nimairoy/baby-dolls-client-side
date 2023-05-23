@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/dolls/:id',
                 element: <PrivateRoute><DollDetails></DollDetails></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/dolls/${params.id}`)
+                loader: ({params})=> fetch(`https://baby-dolls-server.vercel.app/dolls/${params.id}`)
             },
             {
                 path: '/mydolls',
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/dolls/${params.id}`)
+                loader: ({params}) => fetch(`https://baby-dolls-server.vercel.app/dolls/${params.id}`)
             },
             {
                 path: '/addnewdoll',

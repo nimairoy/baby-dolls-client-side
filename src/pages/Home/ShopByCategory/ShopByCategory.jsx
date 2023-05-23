@@ -10,7 +10,7 @@ const ShopByCategory = () => {
     const [activeTab, setActiveTab] = useState('cute-dolls');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/categories?category=${activeTab}`)
+        fetch(`https://baby-dolls-server.vercel.app/categories?category=${activeTab}`)
             .then(res => res.json())
             .then(data => {
                 setCategories(data);

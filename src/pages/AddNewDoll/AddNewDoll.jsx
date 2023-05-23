@@ -35,7 +35,7 @@ const AddNewDoll = () => {
         }
         console.log(dollInfo)
 
-        fetch('http://localhost:5000/dolls', {
+        fetch('https://baby-dolls-server.vercel.app/dolls', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
